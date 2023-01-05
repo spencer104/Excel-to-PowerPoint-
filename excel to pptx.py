@@ -1,5 +1,5 @@
 
-from email.mime import image
+
 import pandas as pd 
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE
@@ -8,6 +8,7 @@ import wikipedia as wp
 import urllib.request
 
 # Download our data into a pandas dataframe 
+# UPDATE ADDRESS TO WHERE YOUR CSV FILE IS 
 df = pd.read_csv('E:/Code Project/Python - PPTX project/Nat_Park.csv')
 del(df["Image"])
 df['Location'] = df['Location'].map(str)
@@ -142,9 +143,13 @@ for i in range(len(df)):
 
 
 # save the powerpoint in my folder  
+#UPDATE 
+# change to where you would like to save your PowerPoint 
 prs.save('E:/Code Project/Python - PPTX project/test.pptx')
 
 # open the powerpoint application on my computer 
 import os
+#UPDATE
+# change to where you put your PowerPoint 
 os.startfile('E:/Code Project/Python - PPTX project/test.pptx')
 
