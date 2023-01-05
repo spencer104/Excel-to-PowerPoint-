@@ -1,5 +1,4 @@
 
-
 import pandas as pd 
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE
@@ -132,9 +131,11 @@ def slide(Name, date, vistor,state, coordinates, acres, km, description,index):
     # we have to download the images because we are unable to refrence the image just using the url  
 
     print(index)
+    #UPDATE where you would like to save a photo 
     urllib.request.urlretrieve(index, "E:/Code Project/Python - PPTX project/park.jpg")
     
     # we will adjust the shape of the photo 
+    #UPDATE WHERE YOU WOULD LIKE TO SAVE PHOTO
     p = slide.shapes.add_picture('E:/Code Project/Python - PPTX project/park.jpg', Inches(1.2), Inches(1.8),Inches(4.5),Inches(3))
 
 # go through our list of national parks and add the necessary info 
